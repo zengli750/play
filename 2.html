@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 500px; ;
+            height: 500px;
+            border-spacing: 0px;
+            empty-cells: hide;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>性别</th>
+                <th>爱好</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">1</td>
+                <td>2</td>
+                <td>3</td>
+                <td rowspan="3">4</td>
+            </tr>
+            <tr>
+                <!-- <td>1</td> -->
+                <td colspan="2">2</td>
+                <!-- <td>3</td> -->
+                <!-- <td>4</td> -->
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <!-- <td>4</td> -->
+            </tr>
+        </tbody>
+        <tfoot></tfoot>
+    </table>
+    
+</body>
+</html>

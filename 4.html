@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: chartreuse;
+            margin: 0;
+            
+        }
+        .box{
+            /* background-color: blue; */
+            height: 500px;
+            width: 1200px;
+            margin-top: 200px;
+            margin-left: 200px;
+            
+        }
+        
+        
+        .list{
+            float: left;
+            overflow: hidden;
+            height: 500px;
+            width: 200px;
+            transition :  2s;
+            /* background-color: blue; */
+        }
+        img{
+            height: 500px;
+        }
+        .box:hover .list{
+            width: 50px;
+
+        }
+        .list:hover{
+            width: 800px!important;
+
+        }
+        /* .list img:nth-child(4){
+            height: 800px;
+
+        } */
+        
+    </style>
+</head>
+<body >
+    <div class="box">
+        <div class="list">
+            <img src="img/1.jpg" alt="">
+            
+        </div>
+        <div class="list">
+            <img src="img/2.jpg" alt="">
+            
+        </div>
+        <div class="list">
+            <img src="img/3.jpg" alt="">
+            
+        </div>
+        <div class="list">
+            <img src="OIP-C.jpg" alt="">
+            
+        </div>
+        
+      
+    </div>
+    
+</body>
+</html>

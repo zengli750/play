@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            background-color: rgb(49, 120, 5);
+        }
+        .box{
+            margin: 100px auto;
+            width: 870px;
+            height: 500px;
+            /* background-color: gold; */
+        }
+        .list{
+            float: left;
+            overflow: hidden;
+            width: 200px;
+            height: 500px;
+            background-color: blue;
+            transition: 2s;
+        }
+        img{
+            height: 500px;
+        }
+        .box:hover .list{
+            width: 80px;
+        }
+        .list:hover{
+            width: 700px !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="list">
+            <img src="img/1.jpg" alt="">
+        </div>
+        <div class="list">
+            <img src="img/2.jpg" alt="">
+        </div>
+           <div class="list">
+            <img src="img/3.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         p{
+            text-align: center;
+            font-size: 50px;
+            
+           
+        }
+        body{
+            background-image: url(7c1.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        table{
+            margin: 100px auto;
+            text-align: center;
+            height: 419px;
+            width: 786px;
+            border-radius: 5px;
+            border: yellow;
+            background-color: aqua;
+        }
+         table #result{
+            width: 786px;
+            height: 20px;
+            
+        }
+        table input{
+            margin: 5px;
+            padding: 5px;
+            font-size: 30px;
+
+        }
+        table button{
+            height: 40px;
+            width: 150px;
+            font-size: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <p>高级计算器</p>
+    <table border="1">
+        <tr>
+            <td>第一个数</td>
+            <td><input type="text" id="first"></td>
+        </tr>
+        <tr>
+            <td>第二个数</td>
+            <td><input type="text" id="twice"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button onclick="add()">+</button>
+                <button onclick="subtract()">-</button>
+                <button onclick="ride()">*</button>
+                <button onclick="divide()">/</button>
+                <button onclick="power()">^</button>
+
+            </td>
+           
+        </tr>
+        <tr>
+            <td colspan="2">
+               <p id="result"></p> 
+                <!-- <output id="result"></output> -->
+                 <!-- <input type="text" id="result" readonly value="0"> -->
+            </td>
+        </tr>
+        <script>
+            function getFirstNumber(){
+                let firstNumber=document.querySelector('#first').value
+                return firstNumber
+            }
+             function getTwiceNumber(){
+                let twiceNumber=document.querySelector('#twice').value
+                return twiceNumber
+            }
+            function add(){
+                let result=Number(getFirstNumber())+Number(getTwiceNumber())
+                sendResult(result)
+            }
+            function subtract(){
+                let result=Number(getFirstNumber())-Number(getTwiceNumber())
+                 sendResult(result)
+            }
+             function ride(){
+                let result=Number(getFirstNumber())*Number(getTwiceNumber())
+                 sendResult(result)
+            }
+             function divide(){
+                let result=Number(getFirstNumber())/Number(getTwiceNumber())
+                 sendResult(result)
+            }
+            function power(){
+                let result=Number(getFirstNumber())**Number(getTwiceNumber())
+                 sendResult(result)
+            }
+            function sendResult(a){
+                let num=document.querySelector('#result')
+                num.innerHTML=a
+            }
+
+
+
+
+
+
+        </script>
+
+
+    </table>
+    
+</body>
+</html>

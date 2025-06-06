@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+           margin: 0;
+           padding: 0;
+           text-align: center;
+           border-radius: 10px;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        button{
+            background-color:aqua;
+            color:blanchedalmond;
+            border-radius: 5px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text"id="search" placeholder="请输入书名">
+        <button onclick="searching()">搜索</button>
+    </div>
+    <ul>
+
+    </ul>
+    <p></p>
+    <script>
+        let books=["警世名言", "红楼梦", "百年孤独", "老人与海", "人生", "平凡的世界", "三国演义", "遥远的救世主", "钢铁是怎样炼成的", "白夜行", "魔鬼搭讪学", "童年", "白鹿原", "孟子", "解忧杂货铺", "飘", "嫌疑人X的献身", "活着"]
+        let ul=document.querySelector('ul')
+        let p=document.querySelector('p')
+        let ipsearch=document.querySelector('#search')
+        function setul(arr){
+            p.innerHTML=`共${arr.length}条`
+            ul.innerHTML=''
+            for(let i=0;i<arr.length;i++){
+                ul.innerHTML+=`<li> ${arr[i]}</li>`
+
+            }
+
+        }
+        setul(books)
+        let arr1=[];
+        function searching(){
+            let x=ipsearch.value;
+            arr1=[];
+            for(let i=0;i<books.length;i++){
+                if(books[i].indexOf(x) !=-1){
+                    console.log(books[i])
+                    arr1.push(books[i])
+                }
+                
+            }
+            setul(arr1)
+            
+
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            position: relative;
+            background-color: green;
+            width: 1000px;
+            height: 600px;
+            margin: 150px auto;
+        }
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            height: 80px;
+            width: 80px;
+            transform:translate()
+        }
+           
+    </style>
+</head>
+<body>
+    <div id="box">
+        <img src="img/1.png" alt="">
+    </div>
+    <script>
+        let img=document.querySelector('img')
+        let x=0
+        let y=0
+        document.documentElement.onkeydown = function(event){
+            let key=event.keyCode
+        
+            switch(key){
+                case 37:
+                    x += -30
+                    img.setAttribute("src","img/4.png")
+                    img.style.transform =`translate(${x}px,${y}px)`
+                    break;
+                case 38:
+                    y += -30
+                    img.setAttribute("src","img/2.png")
+                    img.style.transform =`translate(${x}px,${y}px)`
+                    break;
+                case 39:
+                    x += 30
+                    img.setAttribute("src","img/3.png")
+                    img.style.transform =`translate(${x}px,${y}px)`
+                    break;
+                case 40:
+                    y += 30
+                    img.setAttribute("src","img/1.png")
+                    img.style.transform =`translate(${x}px,${y}px)`
+                    break;   
+            }
+
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0 auto;
+            background-image: url(北极熊/bg.png);
+            padding: 0;
+          
+        }
+        .box{
+            overflow: hidden;
+            margin: 450px;
+            width: 200px;
+            height: 100px;
+            /* background-color: brown; */
+            animation: move2 5s forwards;
+            
+        }
+        img{
+            animation: movel 0.5s steps(8) infinite;
+            
+        }
+        img:hover{
+            animation-play-state: paused;
+        }
+        @keyframes movel{
+            form{
+                transform:translateX(0)
+            }
+            to{
+                transform: translateX(-100%);
+            }
+
+
+        }
+        @keyframes move2{
+            to {
+               margin-left: 1300px;
+             
+
+            }
+
+        }
+           
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="北极熊/bear.png" alt="">
+    </div>
+    
+</body>
+</html>
