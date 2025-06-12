@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-image: url(https://p5.ssl.qhimgs1.com/t040e4cbf6d294f3135.jpg);
+            background-size: contain;
+            
+
+        }
+        .scroll{
+            position: fixed;
+            height: 50px;
+            width: 0%;
+            background-color: aqua;
+            z-index: 100;
+        }
+        h1,p{
+            width: 500px;
+            margin: auto;
+            line-height: 80px;
+            color: brown;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="scroll" id="scroll1"></div>
+    <h1>满分作文精彩语段汇总</h1>
+    <p>1. 面对着苍茫的群山，面对着无际的原野，面对着清澈的小溪，面对着芳郁的野花，面对着浅浅的草叶，我沉默，我惊叹，我欣喜，我欢乐，我无言。</p>
+    <p>2.我还是爱着属于我的六年级。爱属于六年级给与我的心旷神怡的时刻：当你冥思苦想，而终于恍然大悟的时候，你会品尝成功的喜悦；当你忙里偷闲和别人闲聊上几句家常时，你会发现生活的乐趣；当你趁着课间十分钟一瞥窗外那云卷云舒的宽容时，你会感到心灵的轻松与惬意。所以，我说——六年级是一幅流光溢彩的油画，是一片充满幻想的云霞，是一个充满竞争的年华。</p>
+    <p>3. 我明白了珍惜时间才不会虚度此生的真谛，我懂得了珍爱人生就要去拼搏去奋斗的道理。如醉如痴，我用激情吮吸着知识的甘露；豁然开朗，我用真诚去探寻着做人的美好。</p>
+    <p>4. 追求，就是千年不变的至情，百代流传的绮梦；是沁人心脾，令人留连的田园风光；是一个人、一个家、一个民族、一个国家奋斗不息的崇高理想。因为有了追求，才有了一个个古老而又美好的传说；有了追求，才有了一座座绵延无边、用血肉筑起的钢铁长城；有了追求，才有了一尊尊屹立于天地之间、永不低头的雕像。</p>
+    <p>5. 美丽是平凡的，平凡得让你感觉不到她的存在；美丽是平淡的，平淡得只剩下温馨的记忆；美丽又是平静的，平静的只有你费尽心思才能激起她的涟漪。</p>
+    <p>6. 有人爱雾，爱它的朦胧，爱它的缥缈；有人爱霜，爱它的洁白，爱它的淡雅；也有人爱露，爱它的晶莹剔透，爱它的娇小玲珑；更有人爱雪，爱它的纯洁，爱它的素雅。</p>
+    <p>7. 是的，童心无价。拥有了童心，你便会拥有天真纯洁、无私无邪的品格；拥有了童心，你便会忘记生活中的琐屑愁事，快乐的面对人生；拥有了童心，你便会懂得如何面对生活，享受生活。</p>
+    <p>8. 人生好似调味盘，酸得是惆怅，苦的是锻炼，辣的是过程，甜的是成功。</p>
+    <p>9. 花一样的你，花一样的我，花一样的年华，花一样的世界，花一样的未来。不要在虚度光阴，不要在碌碌无为。经常同自己谈话吧，你会更了解自己，你会过的更充实，你会更真心地热爱这个美好的世界。</p>
+    <p>10. 亲爱的朋友们，不要抱怨长路漫漫走得不潇洒浪漫，其实艰难困苦就是你成功的摇篮，让长风的翅膀携你过尽千帆，让心思的呼唤伴你尝过生命的难关。只要心中的风景不凋零，生命的叶子永远不会枯黄腐烂，永葆一颗接受磨砺的心，人生将会永远是春天。</p>
+    
+    <script>
+        function update(){
+        let onWindowScroll=document.documentElement.scrollTop
+        let height =document.documentElement.scrollHeight-document.documentElement.clientHeight
+        let x=(onWindowScroll/height)*100
+        document.getElementById("scroll1").style.width =`${x}%`
+        }window.addEventListener("scroll",update)
+        // console.log(document.documentElement.scrollTop)
+
+        // console.log(document.documentElement.scrollHeight)
+        // console.log(document.documentElement.clientHeight)
+    </script>
+</body>
+</html>
