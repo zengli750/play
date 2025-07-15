@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            margin: 0;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .box{
+        
+            padding: 10px;
+            border:   1px solid bisque;
+            width: 450px;
+            text-align: center;
+            border-radius: 5px;
+            
+        }
+        .box>h2{
+           font-size: 30px;
+        }
+        input{
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 80%;
+        }
+
+        button{
+            width: 70%;
+            background-color: blueviolet;
+            color: white;
+            border-radius: 3px;
+            border: none;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form id="forms" action="https://www.bilibili.com/?spm_id_from=333.1007.0.0" method="get">
+        <h2>用户注册</h2>
+        用户姓名<input type="text" id="username"name="username"  placeholder="请输入注册用户名">
+        用户密码<input type="password"id="password" name="password" placeholder="请输入注册用的密码">
+        <button>注册</button>
+        </form>
+    </div>   
+</body>
+<script>
+    alert("用户名允许字母、数字、下划线，长度 3 - 20 位;密码至少 8 位，包含字母和数字")
+    document.getElementById("forms").addEventListener("submit",function(event){
+        let username=document.getElementById("username").value 
+        let password=document.getElementById("password").value
+        if(username===""||password===""){
+            event.preventDefault() //阻止提交
+            alert("尊敬的用户大大，请不要输入空值，不然注册不了哦")
+            return
+        }
+        let usernameReg=/^[a-zA-Z0-9_]{3,20}$/
+        let passwordReg=/^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{8,}$/
+        if(usernameReg.test(username)&& passwordReg.test(password)){
+            alert("注册成功")
+        }else{
+            alert("提交错误，请重新注册!")
+            event.preventDefault()
+        }
+
+    })
+ 
+</script>
+</html>
